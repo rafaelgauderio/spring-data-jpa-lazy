@@ -9,6 +9,10 @@ import com.rafaeldeluca.springjpalazy.entities.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-	@Query("SELECT obj FROM Employee obj JOIN FETCH obj.department")
+	// cláusula JOIN FETCH não funciona para byscas paginadas no Spring
+	// consulta JPQL
+	@Query("SELECT objeto " +
+			"FROM Employee objeto " +
+			"JOIN FETCH objeto.department")
 	List<Employee> findEmployeesWithDepartments();
 }

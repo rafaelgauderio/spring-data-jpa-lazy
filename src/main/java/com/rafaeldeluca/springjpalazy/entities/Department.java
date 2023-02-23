@@ -14,9 +14,9 @@ public class Department {
 	public Long id;
 	public String name;
 	
-	@OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+	//@OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
 	// alterando de LAZY para EAGER direto no relacionamento da entidade, não é recomendado
-	//@OneToMany(mappedBy = "department")
+	@OneToMany(mappedBy = "department")
 	public List<Employee> employees = new ArrayList<>();
 	
 	public Department() {

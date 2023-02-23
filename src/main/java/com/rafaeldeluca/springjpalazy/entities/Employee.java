@@ -11,7 +11,10 @@ public class Employee {
 	public Long id;
 	public String name;	
 	public String email;
-	
+
+	// como não preciso dos dados do department na consulta. alterar para LAZY, para remover a consulta left join
+	// mas se fizer uma consulta que precisa do department vai ter que fazer duas consultas no banco de dados
+	//@ManyToOne(fetch = FetchType.LAZY)
 	@ManyToOne
 	@JoinColumn(name = "department_id")
 	public Department department;
