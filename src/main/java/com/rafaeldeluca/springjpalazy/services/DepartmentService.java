@@ -28,6 +28,12 @@ public class DepartmentService {
 	@Transactional(readOnly = true)
 	public List<EmployeeMinDTO> findEmployeesByDepartment(Long id) {
 		Optional<Department> result = repository.findById(id);
+
+		// Por padrão na jpa o carregamento das entidades associadas é feito
+		// EAGER : para um
+		// LAZY: para muitos
+		// Mas é possível alterar esse comportamento padrão para deixar a consulta mais rápida (trocar de lazy para eager)
+
 		List<Employee> list = result.get().getEmployees();
 		return list.stream().map(x -> new EmployeeMinDTO(x)).toList();
 	}

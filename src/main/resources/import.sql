@@ -2,6 +2,7 @@ INSERT INTO tb_department(name) VALUES ('Sales');
 INSERT INTO tb_department(name) VALUES ('Management');
 INSERT INTO tb_department(name) VALUES ('Training');
 
+INSERT INTO tb_employee(name, email, department_id) VALUES ('Rafael de Luca', 'deluca1712@gmail.com', 1);
 INSERT INTO tb_employee(name, email, department_id) VALUES ('Maria', 'maria@gmail.com', 1);
 INSERT INTO tb_employee(name, email, department_id) VALUES ('Ana', 'ana@gmail.com', 2);
 INSERT INTO tb_employee(name, email, department_id) VALUES ('Bob', 'bob@gmail.com', 1);
@@ -16,3 +17,4 @@ INSERT INTO tb_employee(name, email, department_id) VALUES ('Tiago', 'tiago@gmai
 INSERT INTO tb_employee(name, email, department_id) VALUES ('Andressa', 'andressa@gmail.com', 2);
 INSERT INTO tb_employee(name, email, department_id) VALUES ('Meire', 'meire@gmail.com', 3);
 INSERT INTO tb_employee(name, email, department_id) VALUES ('Carol', 'carol@gmail.com', 1);
+INSERT INTO tb_employee(name, email, department_id) VALUES ('Cleiton', 'cleiton@gmail.com', 1);
