@@ -19,6 +19,8 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository repository;
 
+	// anotation @Transactional assegura resolução de todas as pendências "lazy" com o database
+	// readOnly=true não vai fazer o look de escrita e a consulta via ficar mais rápida
 	@Transactional(readOnly = true)
 	public EmployeeMinDTO findByIdMin(Long id) {
 		Optional<Employee> result = repository.findById(id);
